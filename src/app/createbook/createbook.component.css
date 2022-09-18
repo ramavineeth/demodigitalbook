@@ -1,0 +1,29 @@
+
+
+.register-photo{
+    
+    background-image:url('../../assets/images/alfons-morales-YLSwjSy7stw-unsplash.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: repeat;
+        overflow:hidden ;
+        height:100vh;
+       width: 100vw;
+}
+.form-container{
+    
+    
+background: white;
+width:50%;
+margin:auto;
+height:700px;
+margin-top:50px;
+}
+
+.form-group label {
+    margin-bottom:10px;
+    color:blackś;
+}
+.form-group input {
+   background-color: none;
+}

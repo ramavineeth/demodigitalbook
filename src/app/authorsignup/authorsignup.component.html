@@ -1,0 +1,28 @@
+<div class="register-photo">
+    <div class="form-container">
+        <div class="image-holder"></div>
+        <div  class="form">
+            <p class="error-messages">{{failureMessage}}</p>
+            <p class="success-messages">{{successMessage}}</p> 
+            <div *ngIf="signupContainerFlag">
+            <h6 ><strong>Register to Digital Books</strong> </h6>
+            <div class="form-group"><input [(ngModel)]="author.username" placeholder=" UserName" class="form-control" type="text" >
+                <p class="error-messages"> {{this.blankFields.username1}}
+                 {{this. signUpuserNameExists}}</p>
+             </div>
+             <div class="form-group "><input [(ngModel)]="author.email" class="form-control" type="email"  placeholder=" Email Id">
+                 <p class="error-messages">{{this.blankFields.email1}}
+                     {{this.signUpEmailExists}}</p>
+             </div>
+             <div class="form-group "><input [(ngModel)]="author.password" class="form-control" type="password"  placeholder=" Password">
+                 <p class="error-messages">{{this.blankFields.password}}</p>
+             </div>
+           
+            <div class="form-group">
+                <button (click)="registerAuthor()" class="btn btn-success button" type="submit">Sign Up</button>
+                
+            <a  routerLink="/authorlogin"> Already Registered? Login here.</a>
+            </div>
+        </div>
+    </div>
+</div>

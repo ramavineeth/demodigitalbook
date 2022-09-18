@@ -1,0 +1,54 @@
+<div class="toolbar">
+
+  <h1  ><a class="fs-1 fw-bolder" style="color:black ;text-decoration: none;"routerLink="home" >Digital Books</a></h1>
+  
+  
+   <nav class="navbar navbar-expand-lg navbar-light bg-primary   d-block">
+    <div class="container-fluid ">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+          
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="getbooks"> Available Books </a>
+          </li>
+          <li class="nav-item">
+            <a class ="nav-link text-white" routerLink="readerhome"> Reader </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="authorspace"> Author </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Register/Login
+            </a>
+            <ul class="dropdown-menu bg-primary text-black" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item text-white" routerLink="login">Reader</a></li>
+              <li><a class="dropdown-item text-white" routerLink="authorlogin">Author</a></li>
+              <li><hr class="dropdown-divider"></li>
+               </ul>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>  
+</div>  
+
+
+<div *ngIf="readerService.createbooknavFlag">
+  <a class="btn btn-light" routerLink="authorhome">My Books</a>
+  <a class="btn btn-light" routerLink="createbook">Create Book</a>
+  <button class="btn btn-light" (click)="signout()">Sign Out</button>
+</div>
+
+<br/><br/><br/>
+
+
+
+
+<router-outlet></router-outlet>
